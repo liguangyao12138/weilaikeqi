@@ -1,2 +1,3 @@
+include ':internet'
 include ':app'
 rootProject.name = "My Application"
