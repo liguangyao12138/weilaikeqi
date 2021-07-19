@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +44,8 @@ public class JsonActivity extends AppCompatActivity {
         findViewById(R.id.btn_resolveJSON).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resolveJSONObject();
+                //resolveJSONObject();
+                parseByGSON();
             }
         });
     }
@@ -109,12 +112,42 @@ public class JsonActivity extends AppCompatActivity {
         }.start();
     }
 
+    public void parseByGSON(){
+
+        //1.添加依赖
+
+        //2.实例化GSON对象
+        Gson gson = new Gson();
+
+        //3.toJson
+        Book book = new Book("Android 开发","liguangyao","Android从入门到放弃");
+        String toJson = gson.toJson(book);
+        Log.d(TAG, "toJson = "+toJson);
+
+
+        //4.fromJson
+        Book book1 = gson.fromJson(toJson,Book.class);
+        Log.d(TAG, "book1"+book1);
+
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                String msg = get();
+
+                Test test = gson.fromJson(msg, Test.class);
+                Log.d(TAG, "test = "+test);
+                Log.d(TAG, test.getStatus()+"---"+test.getMsg()+"---"+test.getData());
+            }
+        }.start();
+    }
+
     private String get(){
         try {
             //HttpURLConnection
             //1.实例化一个URL对象
-            //URL url = new URL("http://www.imooc.com/api/teacher?type=3&cid=1");
-            URL url = new URL("http://www.imooc.com/api/teacher?type=2&cid=1");
+            URL url = new URL("http://www.imooc.com/api/teacher?type=3&cid=1");
+            //URL url = new URL("http://www.imooc.com/api/teacher?type=2&cid=1");
 
             //2.获取HttpURLConnection实例
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
