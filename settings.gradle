@@ -1,3 +1,4 @@
+include ':FourMajorComponents'
 include ':handler'
 include ':internet'
 include ':app'
