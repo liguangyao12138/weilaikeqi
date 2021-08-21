@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_contextMenu_delete"
+        android:title="删除" />
+    <item android:title="重命名" >
+        <menu >
+            <item
+                android:id="@+id/item_contextMenu_opera1"
+                android:title="操作1" />
+            <item
+                android:id="@+id/item_contextMenu_opera2"
+                android:title="操作2" />
+        </menu>
+    </item>
+</menu>

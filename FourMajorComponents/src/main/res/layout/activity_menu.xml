@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".menu.MenuActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,15 +14,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_main_activity"
-            android:text="Activity入门"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_main_menu"
-            android:text="Android菜单使用"/>
-
+            android:text="上下文菜单(ContextMenu)"
+            android:id="@+id/btn_menu_context"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

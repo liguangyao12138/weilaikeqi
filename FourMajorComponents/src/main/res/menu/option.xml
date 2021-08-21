@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="保存"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction = "always|withText"
+        android:id="@+id/item_menu_save">
+    </item>
+
+    <item android:title="设置"
+        android:id="@+id/item_menu_setting"></item>
+
+    <item android:title="更多"
+        android:id="@+id/item_menu_more">
+       <menu>
+            <item android:title="子菜单1"></item>
+            <item android:title="子菜单1"></item>
+            <item android:title="退出"></item>
+        </menu>
+    </item>
+
+</menu>
