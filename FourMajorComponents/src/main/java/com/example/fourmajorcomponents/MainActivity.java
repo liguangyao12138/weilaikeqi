@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.fourmajorcomponents.activity.BaseActivity;
+import com.example.fourmajorcomponents.dialogBox.DialogActivity;
 import com.example.fourmajorcomponents.menu.MenuActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btn_main_activity).setOnClickListener(this);
         findViewById(R.id.btn_main_menu).setOnClickListener(this);
+        findViewById(R.id.btn_main_dialog).setOnClickListener(this);
     }
 
     @Override
@@ -30,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v.getId() == R.id.btn_main_menu) {
             Intent intent_menu = new Intent(this, MenuActivity.class);
             startActivity(intent_menu);
+        }else if(v.getId() == R.id.btn_main_dialog){
+            Intent intent_dialog = new Intent(this, DialogActivity.class);
+            startActivity(intent_dialog);
         }
     }
 }
