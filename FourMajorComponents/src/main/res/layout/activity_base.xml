@@ -4,10 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.BaseActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_activity_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="123"/>
+        android:text="打开第二个界面，并传递数据"
+        android:layout_margin="15dp" />
+
+    <Button
+        android:id="@+id/btn_activity_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开对话框"
+        android:layout_margin="15dp" />
+
+    <Button
+        android:id="@+id/btn_activity_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开界面对话框"
+        android:layout_margin="15dp" />
+
+    <Button
+        android:id="@+id/btn_activity_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式启动系统Activity(打开浏览器)"
+        android:layout_margin="15dp" />
+
+    <Button
+        android:id="@+id/btn_activity_five"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="隐式启动普通Activity"
+        android:layout_margin="15dp" />
+
+    <Button
+        android:id="@+id/btn_activity_six"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="带结果返回的方式启动Activity"
+        android:layout_margin="15dp" />
 </LinearLayout>
