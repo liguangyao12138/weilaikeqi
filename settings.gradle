@@ -1,3 +1,5 @@
+include ':AdvancedApplications'
+include ':servicedemo'
 include ':FourMajorComponents'
 include ':handler'
 include ':internet'
